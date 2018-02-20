@@ -1,0 +1,19 @@
+author: Rutvik Patel
+title: Letters from an Apprentice
+email: heyrutvik@gmail.com
+description: I use this blog to write about things that interest me.
+
+url: "https://heyrutvik.github.io"
+twitter_username: heyrutvik
+github_username: heyrutvik
+
+markdown: kramdown
+theme: minima
+#plugins:
+#  - jekyll-feed
+  
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
