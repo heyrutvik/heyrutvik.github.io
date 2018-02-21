@@ -1,8 +1,0 @@
----
-layout: post
-title:  "Hi there!"
-date:   2018-02-20 20:06:54 +0530
-categories: note
----
-
-I will post a new letter soon.. :)
