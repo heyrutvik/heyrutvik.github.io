@@ -7,6 +7,8 @@ url: "https://heyrutvik.github.io"
 twitter_username: heyrutvik
 github_username: heyrutvik
 
+google_analytics: "UA-114613026-1"
+
 markdown: kramdown
 theme: minima
 #plugins:
