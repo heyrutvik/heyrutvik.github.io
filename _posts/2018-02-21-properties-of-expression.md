@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "Properties of Expression"
-date:   2018-02-21 22:00:00 +0530
-categories: functional
+date:  2018-02-21 22:00:00 +0530
 ---
 
 The notion of an **expression** is  central in functional programming (FP) and all the other features of FP can be boils down to it. An Expression is something that is always evaluates to value.
