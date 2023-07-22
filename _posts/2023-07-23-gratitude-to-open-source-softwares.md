@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Gratitude to Open Source Softwares"
+date: 2023-07-23 00:00:00 +0530
+---
+
+I have had great fun at work this week. We are working on a feature which will improve the experience of our customers who are writing Groovy scripts to exhibit custom behaviour to synchronize their issue trackers. Cherry on top, the engineering part was at the right level of difficulty where deep down I knew we can make it work yet it consists of few grey areas. Spoiler, it isn't finished. Good news, the prototype is working.
+
+In a gist, the idea is to provide the user a code editor in the browser with IDE-like features. To give you perspective, we currently have a text area. Astute readers will get the difference. A little bit of knowledge of how modern code editors utilize Language Server Protocol (LSP) to decouple themselves from language specific features and how WebSocket works are enough to see them fit together to get an IDE-like experience in the browser. LSP relies on JSON-RPC protocol to converse between client and server, and it's transport protocol agnostic, meaning it doesn't matter if we use standard IO streams or TCP connection.
+
+While working on the prototype, one of the many interesting things I encountered is that WebSocket supports text as well as binary messages. After tweaking a Groovy LSP, to make it work with WebSocket, I tried to test it with my custom node script which seems to work without any hiccups. Confident enough that it's working correctly, I started making changes in the vscode extension to use WebSocket instead of standard IO streams, a usual practice, to connect with LSP. I could see the vscode was making a request but, to my surprise, LSP was not getting any. I was scratching my head for almost a half day then Wireshark came to rescue. It was showing that some data is being transmitted through WebSocket but looking closely at it, I found it was in binary format. Apparently, the tweaked LSP did not support binary messages and vscode was using it, in contrast to my node script, which was sending text messages.
+
+Near the end of the week, it all went well and I managed to connect a browser based code editor, Monaco, with LSP using WebSocket. But throughout the week, the one thought that was humming in the back of my mind was, "what would the world be like without free and open source softwares?". Few tweaks here and there, which was not that hard in hindsight, I was/am using almost everything off-the-shelf free and open source softwares and libraries. I'm grateful to all those contributors and organizations who make these things happen.
