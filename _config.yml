@@ -1,21 +1,10 @@
-author: Rutvik Patel
 title: Rutvik Patel's Blog
-email: heyrutvik@gmail.com
 description: I use this blog to write about things that interest me.
-
 url: "https://heyrutvik.github.io"
 twitter_username: heyrutvik
 github_username: heyrutvik
 
-google_analytics: "UA-114613026-1"
-
-markdown: kramdown
+# Build settings
 theme: minima
-#plugins:
-#  - jekyll-feed
-  
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - README.md
+plugins:
+  - jekyll-feed
